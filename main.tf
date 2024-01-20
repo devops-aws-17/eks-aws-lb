@@ -86,6 +86,15 @@ module "eks" {
       max_size     = 2
       desired_size = 1
     }
+    three = {
+      name = "node-group-3"
+
+      instance_types = ["t2.small"]
+
+      min_size     = 1
+      max_size     = 3
+      desired_size = 2
+    }
   }
 }
 
@@ -106,7 +115,7 @@ module "irsa-ebs-csi" {
   oidc_fully_qualified_subjects = ["system:serviceaccount:kube-system:ebs-csi-controller-sa"]
 }
 
-/*
+
 resource "aws_eks_addon" "ebs-csi" {
   cluster_name             = module.eks.cluster_name
   addon_name               = "aws-ebs-csi-driver"
@@ -117,5 +126,5 @@ resource "aws_eks_addon" "ebs-csi" {
     "terraform" = "true"
   }
 } 
-*/
+
 
