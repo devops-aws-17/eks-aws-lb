@@ -4,7 +4,7 @@
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = "ap-south-1"
+  default     = "ap-south-2"
 }
 variable "env_name" {
   description = "AWS region"
