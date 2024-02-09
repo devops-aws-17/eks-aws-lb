@@ -60,7 +60,7 @@ resource "helm_release" "lbtest" {
 
   set {
     name  = "region"
-    value = "eu-west-2"
+    value = "us-west-2"
   }
 
   /*set {
