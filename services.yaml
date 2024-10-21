@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: my-app-service
   labels:
-    app: my-app
+    app: nginx
 spec:
   selector:
-    app: my-app  # This matches the Pods from the Deployment
+    app: nginx  # This matches the Pods from the Deployment
   ports:
   - protocol: TCP
     port: 80  # Port exposed outside the cluster (e.g., for external traffic)
